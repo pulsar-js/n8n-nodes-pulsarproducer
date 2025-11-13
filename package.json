@@ -1,23 +1,24 @@
 {
-  "name": "n8n-nodes-pulsar-producer",
-  "version": "1.0.3",
+  "name": "n8n-nodes-pulsarproducer",
+  "version": "1.0.0",
   "description": "Publish messages to Apache Pulsar",
   "keywords": [
-    "n8n-nodes-pulsar-producer",
+    "n8n-nodes-pulsarproducer",
     "pulsar",
     "apache",
     "message",
     "queue",
+    "publish",
     "n8n-community-node-package"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/pulsar-js/n8n-nodes-pulsar-producer",
+  "homepage": "https://github.com/pulsar-js/n8n-nodes-pulsarproducer",
   "author": {
     "name": "Corey Butler"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pulsar-js/n8n-nodes-pulsar-producer.git"
+    "url": "https://github.com/pulsar-js/n8n-nodes-pulsarproducer.git"
   },
   "engines": {
     "node": ">=20.15"
