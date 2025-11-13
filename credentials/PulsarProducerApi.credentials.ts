@@ -11,7 +11,7 @@ const { test } = require('@pulsar-js/producer');
 
 export class PulsarProducerApi implements ICredentialType {
 	name = 'pulsarProducerApi';
-	displayName = 'Apache Pulsar API';
+	displayName = 'Apache Pulsar Producer';
 	documentationUrl = 'https://github.com/pulsar-js/n8n-nodes-pulsarproducer#credentials';
 	icon: Icon = { light: 'file:pulsar.svg', dark: 'file:pulsar-white.svg' };
 
