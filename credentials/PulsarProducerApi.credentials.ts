@@ -11,7 +11,7 @@ const { test } = require('@pulsar-js/producer');
 
 export class PulsarProducerApi implements ICredentialType {
 	name = 'pulsarProducerApi';
-	displayName = 'Apache Pulsar Producer';
+	displayName = 'Apache Pulsar Producer'; // eslint-disable-line n8n-nodes-base/cred-class-field-display-name-missing-api
 	documentationUrl = 'https://github.com/pulsar-js/n8n-nodes-pulsarproducer#credentials';
 	icon: Icon = { light: 'file:pulsar.svg', dark: 'file:pulsar-white.svg' };
 
