@@ -10,14 +10,14 @@ const { publish } = require('@pulsar-js/producer');
 
 export class PulsarProducer implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Apache Pulsar',
+		displayName: 'Apache Pulsar Publisher',
 		name: 'pulsarProducer',
 		icon: { light: 'file:pulsar.svg', dark: 'file:pulsar-white.svg' },
 		group: ['input'],
 		version: 1,
 		description: 'Publish messages to Apache Pulsar',
 		defaults: {
-			name: 'Apache Pulsar Publisherz',
+			name: 'Apache Pulsar Publisher',
 		},
 		inputs: ['main'],
 		outputs: ['main'],
