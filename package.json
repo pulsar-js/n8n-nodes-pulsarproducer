@@ -1,0 +1,63 @@
+{
+  "name": "n8n-nodes-pulsar-producer",
+  "version": "1.0.3",
+  "description": "Publish messages to Apache Pulsar",
+  "keywords": [
+    "n8n-nodes-pulsar-producer",
+    "pulsar",
+    "apache",
+    "message",
+    "queue",
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/pulsar-js/n8n-nodes-pulsar-producer",
+  "author": {
+    "name": "Corey Butler"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pulsar-js/n8n-nodes-pulsar-producer.git"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "npx rimraf dist && tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/PulsarProducerApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/PulsarProducer/PulsarProducer.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@typescript-eslint/parser": "~8.32.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "gulp": "^5.0.0",
+    "n8n-core": "*",
+    "n8n-workflow": "*",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "@pulsar-js/producer": "^1.0.4"
+  }
+}

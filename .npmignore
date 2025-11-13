@@ -1,0 +1,4 @@
+# macOS + TypeScript build junk
+.DS_Store
+*.tsbuildinfo
+
