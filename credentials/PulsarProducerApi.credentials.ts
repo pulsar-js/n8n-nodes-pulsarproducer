@@ -212,6 +212,13 @@ export class PulsarProducerApi implements ICredentialType {
 		}
 	];
 
+	// credentialTest = {
+	// 	function: async function (): Promise<boolean> {
+	// 		throw new Error('like chump, heyy!')
+	// 		return true;
+	// 	},
+	// };
+
 	// Use the function form of `authenticate` (IAuthenticate) so n8n will call it with credentials and requestOptions
 	authenticate = async (
 		credentials: any,
@@ -247,7 +254,7 @@ export class PulsarProducerApi implements ICredentialType {
 			}
 		}
 
-		const accessible: boolean = await test(connectionString, {authentication}).catch(console.error);
+		const accessible: boolean = await test(connectionString, { authentication }).catch(console.error);
 		if (!accessible) {
 			throw new Error(`cannot reach Pulsar server at ${credentials?.pulsarServer}`);
 		}
@@ -265,4 +272,5 @@ export class PulsarProducerApi implements ICredentialType {
 			url: '',
 		},
 	};
+
 }

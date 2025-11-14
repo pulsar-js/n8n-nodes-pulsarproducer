@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-pulsarproducer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Publish messages to Apache Pulsar",
   "keywords": [
     "n8n-nodes-pulsarproducer",
@@ -50,13 +50,13 @@
     "eslint": "^8.57.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.3",
     "gulp": "^5.0.0",
-    "n8n-core": "*",
-    "n8n-workflow": "*",
+    "n8n-core": "^1.119.1",
+    "n8n-workflow": "^1.117.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
-    "n8n-workflow": "*"
+    "n8n-workflow": "^1.117.0"
   },
   "dependencies": {
     "@pulsar-js/producer": "^1.0.4"
