@@ -209,6 +209,13 @@ export class PulsarProducerApi implements ICredentialType {
 				show: { authType: ['athenz'] },
 			},
 			description: 'The Athenz ZTS URL.',
+		},
+		{
+			displayName:
+				'<b><u>The setting below is ignored!</u></b><br/><br/>Unfortunately, n8n does not support custom credential tests for non-HTTP based connections. This credential mocks an HTTP request in order to run a custom authentication check to the Pulsar server (using the Pulsar binary protocol, not HTTP). n8n adds the "Allowed HTTP Request Domains" to all credentials it thinks are HTTP credentials, resulting in the unused form field below.',
+			name: 'credNote',
+			type: 'notice',
+			default: '',
 		}
 	];
 
