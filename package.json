@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-pulsarproducer",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Publish messages to Apache Pulsar",
   "keywords": [
     "n8n-nodes-pulsarproducer",
