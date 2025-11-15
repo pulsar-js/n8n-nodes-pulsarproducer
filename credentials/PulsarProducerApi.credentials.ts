@@ -210,13 +210,37 @@ export class PulsarProducerApi implements ICredentialType {
 			},
 			description: 'The Athenz ZTS URL.',
 		},
+		// {
+		// 	displayName:
+		// 		'<b><u>The setting below is ignored!</u></b><br/><br/>Unfortunately, n8n does not support custom credential tests for non-HTTP based connections. This credential mocks an HTTP request in order to run a custom authentication check to the Pulsar server (using the Pulsar binary protocol, not HTTP). n8n adds the "Allowed HTTP Request Domains" to all credentials it thinks are HTTP credentials, resulting in the unused form field below.',
+		// 	name: 'credNote',
+		// 	type: 'notice',
+		// 	default: '',
+		// },
 		{
-			displayName:
-				'<b><u>The setting below is ignored!</u></b><br/><br/>Unfortunately, n8n does not support custom credential tests for non-HTTP based connections. This credential mocks an HTTP request in order to run a custom authentication check to the Pulsar server (using the Pulsar binary protocol, not HTTP). n8n adds the "Allowed HTTP Request Domains" to all credentials it thinks are HTTP credentials, resulting in the unused form field below.',
-			name: 'credNote',
-			type: 'notice',
+			displayName: 'Allowed HTTP Request Domains',
+			name: 'allowedHttpRequestDomains',
+			type: 'options',
+			default: 'all',                // this is the important part
+			options: [
+				{ name: 'All', value: 'all' },
+				{ name: 'Specific Domains', value: 'domains' },
+				{ name: 'None', value: 'none' },
+			],
+			displayOptions: {
+				show: { authType: ['na'] },
+			},
+			// No description needed — it will never be seen
+		},
+		{
+			displayName: 'Allowed Domains',
+			name: 'allowedDomains',
+			type: 'string',
 			default: '',
-		}
+			displayOptions: {
+				show: { authType: ['na'] },
+			},
+		},
 	];
 
 	// credentialTest = {
